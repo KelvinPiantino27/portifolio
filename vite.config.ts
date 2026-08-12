@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
 // base "./" keeps asset URLs relative, so the build works from a GitHub Pages
-// project subpath (thenivlek.github.io/portifolio/) without hardcoding it.
+// project subpath (kelvinpiantino27.github.io/portifolio/) without hardcoding it.
 export default defineConfig({
   plugins: [react()],
   base: "./",

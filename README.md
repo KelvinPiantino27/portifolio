@@ -4,7 +4,7 @@ Portfólio single-page em React. Tema claro/escuro, PT/EN, filtro de projetos e 
 
 Stack: React 19 + TypeScript, build com Vite. Sem router, sem biblioteca de estado, sem biblioteca de i18n — a página não precisa de nenhum dos três.
 
-No ar em [thenivlek.github.io/portifolio](https://thenivlek.github.io/portifolio/).
+No ar em [kelvinpiantino27.github.io/portifolio](https://kelvinpiantino27.github.io/portifolio/).
 
 ## Rodar
 
@@ -57,7 +57,7 @@ npm run sync:linkedin -- ./linkedin-export
 
 Em `projects`, o campo `tag` aceita `"Mobile"`, `"Web"` ou `"Desktop"`, que são também os filtros da seção. `skillGroups` é agrupamento curado: o LinkedIn devolve lista plana.
 
-**Contato, links e perfil** estão em `src/config.ts`, com `LINKEDIN_HANDLE` como fonte única do link do perfil. A foto vem de `https://github.com/Thenivlek.png`, que serve sempre o avatar atual da conta; se falhar, o círculo cai no monograma. O botão de currículo aponta para `./cv.pdf` — coloque o arquivo em `public/`, ou deixe `cvUrl: ""` para escondê-lo.
+**Contato, links e perfil** estão em `src/config.ts`, com `LINKEDIN_HANDLE` como fonte única do link do perfil. A foto vem de `https://github.com/KelvinPiantino27.png`, que serve sempre o avatar atual da conta; se falhar, o círculo cai no monograma. O botão de currículo aponta para `./cv.pdf` — coloque o arquivo em `public/`, ou deixe `cvUrl: ""` para escondê-lo.
 
 **Cores**: bloco `:root` no topo de `src/styles.css`, e `:root[data-kp-theme="light"]` logo abaixo.
 

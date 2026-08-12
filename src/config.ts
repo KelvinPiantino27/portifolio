@@ -35,6 +35,6 @@ export const SITE: Site = {
   location: "São Paulo, BR",
   cvUrl: "./cv.pdf",
   // size=264 is 2x the 132px slot, for retina.
-  photoUrl: "https://github.com/Thenivlek.png?size=264",
+  photoUrl: "https://github.com/KelvinPiantino27.png?size=264",
   initials: "KP",
 };
