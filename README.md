@@ -1,10 +1,10 @@
 # Portfólio — Kelvin Piantino
 
-Portfólio single-page em React. Tema claro/escuro, PT/EN, filtro de projetos, modal de detalhe.
+Portfólio single-page em React. Tema claro/escuro, PT/EN, filtro de projetos e modal de detalhe.
 
 Stack: React 19 + TypeScript, build com Vite. Sem router, sem biblioteca de estado, sem biblioteca de i18n — a página não precisa de nenhum dos três.
 
-Documentação detalhada em [`docs/`](docs/README.md).
+No ar em [thenivlek.github.io/portifolio](https://thenivlek.github.io/portifolio/).
 
 ## Rodar
 
@@ -43,53 +43,34 @@ docs/                   documentação
 legacy-dc/              versão anterior, no framework do Claude Design
 ```
 
-`dist/` é gerado e ignorado pelo git. A publicação é por GitHub Actions — ver [docs/deploy.md](docs/deploy.md).
+`dist/` é gerado e ignorado pelo git.
 
-## Onde editar o conteúdo
+## Conteúdo
 
-**Experiência e formação** vêm do LinkedIn. Não edite `linkedin.generated.ts` à mão; rode o sync:
+**Experiência e formação** vêm do export oficial do LinkedIn. `linkedin.generated.ts` é gerado; editá-lo à mão é sobrescrito no próximo sync:
 
 ```bash
 npm run sync:linkedin -- ./linkedin-export
 ```
 
-Passo a passo em [docs/sincronizacao-linkedin.md](docs/sincronizacao-linkedin.md).
+**O resto do texto** está em `src/content/pt.ts` e `src/content/en.ts`. Os dois implementam a interface `Dict` de `types.ts`, então uma chave presente em só um idioma quebra o build — é intencional.
 
-**O resto** fica em `src/content/pt.ts` e `src/content/en.ts`. Os dois implementam a interface `Dict` de `types.ts`, então uma chave adicionada só em um idioma quebra o build — é essa a ideia.
+Em `projects`, o campo `tag` aceita `"Mobile"`, `"Web"` ou `"Desktop"`, que são também os filtros da seção. `skillGroups` é agrupamento curado: o LinkedIn devolve lista plana.
 
-- `projects` — os três atuais são fictícios, herdados do design. Troque pelos reais. `tag` tem que ser `"Mobile"`, `"Web"` ou `"Desktop"`, que são também os filtros.
-- `skillGroups` — o agrupamento é curadoria sua; o LinkedIn só devolve lista plana.
-- `heroTitle`, `heroBody`, `about1`, `about2`, `stats` — textos de vitrine, não existem no perfil.
-
-**Contato, links e perfil**: `src/config.ts`. `LINKEDIN_HANDLE` é a fonte única do link do perfil.
+**Contato, links e perfil** estão em `src/config.ts`, com `LINKEDIN_HANDLE` como fonte única do link do perfil. A foto vem de `https://github.com/Thenivlek.png`, que serve sempre o avatar atual da conta; se falhar, o círculo cai no monograma. O botão de currículo aponta para `./cv.pdf` — coloque o arquivo em `public/`, ou deixe `cvUrl: ""` para escondê-lo.
 
 **Cores**: bloco `:root` no topo de `src/styles.css`, e `:root[data-kp-theme="light"]` logo abaixo.
 
-## Foto
-
-`photoUrl` em `src/config.ts` aponta para `https://github.com/Thenivlek.png?size=264`. É um URL permanente que sempre serve o avatar atual da conta — trocar a foto no GitHub troca a do portfólio, sem rebuild e sem deploy.
-
-Se a imagem falhar (rate limit, offline, conta renomeada), o círculo cai no monograma "KP" sozinho.
-
-Alternativas, todas trocando uma linha:
-
-- **Gravatar**, atrelado ao e-mail: `https://gravatar.com/avatar/<sha256-do-email-minúsculo>?s=264`
-- **Arquivo local**: ponha em `src/assets/`, `import foto from "./assets/foto.jpg"`, `photoUrl: foto`
-
-## CV
-
-Coloque o PDF em `public/cv.pdf`. O botão já aponta para `./cv.pdf`; sem o arquivo ele dá 404. Para esconder o botão, deixe `cvUrl: ""`.
-
 ## Publicar
 
-Push em `main` publica sozinho. A configuração de uma vez só (Pages → Source: GitHub Actions) está em [docs/deploy.md](docs/deploy.md).
+Push em `main` publica sozinho, via GitHub Actions e Pages. O workflow roda o self-check do sync e o type-check antes de publicar, então erro de tipo não vai ao ar.
+
+## Documentação
+
+- [docs/deploy.md](docs/deploy.md) — pipeline de publicação
+- [docs/sincronizacao-linkedin.md](docs/sincronizacao-linkedin.md) — passo a passo do sync
+- [docs/linkedin.md](docs/linkedin.md) — por que os dados do LinkedIn são sincronizados em build, e não lidos em tempo real
 
 ## legacy-dc/
 
-Versão anterior, no framework proprietário do Claude Design (`<x-dc>`, `<sc-for>`, `DCLogic`). Guardada só para consulta; nada do projeto atual depende dela e pode ser apagada.
-
-Converter para React cortou o vínculo com o projeto em claude.ai/design: mudanças feitas lá não voltam mais para cá.
-
-## Por que o portfólio não lê o LinkedIn em tempo real
-
-Resposta longa em [docs/linkedin.md](docs/linkedin.md), com a demonstração de por que `.env` não guarda segredo em site estático.
+Versão anterior da página, no framework proprietário do Claude Design (`<x-dc>`, `<sc-for>`, `DCLogic`). Guardada só para consulta — nada do projeto atual depende dela.
