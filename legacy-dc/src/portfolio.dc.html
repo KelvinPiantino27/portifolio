@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#161826">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#161826"/>
+    <circle cx="600" cy="360" r="150" fill="none" stroke="#9184d9" stroke-width="6"/>
+    <text x="600" y="405" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-size="140" font-weight="500" fill="#e9e9ed">KP</text>
+    <rect x="470" y="560" width="260" height="8" rx="4" fill="#9184d9"/>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/nocturne-0a450635-e255-48da-8f2a-98a027e7e082/styles.css">
+<script src="_ds/nocturne-0a450635-e255-48da-8f2a-98a027e7e082/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+--pg-bg:#161826;--pg-surface:#232532;--pg-ring:#3f424d;
+--pg-text:#e9e9ed;--pg-bright:#cfd3e5;--pg-lead:#b2b6ca;--pg-muted:#9397ab;--pg-label:#9296a9;--pg-faint:#8f93a6;
+--pg-accent:#9184d9;--pg-accent-lt:#b5abfc;--pg-accent-mid:#796cbf;--pg-accent-deep:#5d5294;--pg-accent-br:#d2cefd;
+--pg-line-1:rgba(233,233,237,.05);--pg-line-2:rgba(233,233,237,.055);--pg-line-3:rgba(233,233,237,.06);--pg-line-4:rgba(233,233,237,.08);
+--pg-line-5:rgba(233,233,237,.12);--pg-line-6:rgba(233,233,237,.14);--pg-line-7:rgba(233,233,237,.16);--pg-line-8:rgba(233,233,237,.18);
+--pg-sweep:rgba(233,233,237,.55);--pg-header:rgba(22,24,38,.82);--pg-scrim:rgba(10,11,18,.78);
+--pg-sh-card:rgba(0,0,0,.55);--pg-sh-modal:rgba(0,0,0,.65);--pg-noise:.038;--pg-glow:.22;
+}
+:root[data-kp-theme="light"]{
+--color-bg:#e4e7f5;--color-surface:#f3f5fe;--color-text:#292b31;--color-accent:#5d5294;--color-divider:rgba(41,43,49,.18);
+--pg-bg:#e4e7f5;--pg-surface:#f3f5fe;--pg-ring:#cfd3e5;
+--pg-text:#292b31;--pg-bright:#3f424d;--pg-lead:#595d6c;--pg-muted:#595d6c;--pg-label:#656a7a;--pg-faint:#75798c;
+--pg-accent:#5d5294;--pg-accent-lt:#5d5294;--pg-accent-mid:#5d5294;--pg-accent-deep:#b5abfc;--pg-accent-br:#423a6a;
+--pg-line-1:rgba(41,43,49,.05);--pg-line-2:rgba(41,43,49,.07);--pg-line-3:rgba(41,43,49,.08);--pg-line-4:rgba(41,43,49,.10);
+--pg-line-5:rgba(41,43,49,.14);--pg-line-6:rgba(41,43,49,.16);--pg-line-7:rgba(41,43,49,.18);--pg-line-8:rgba(41,43,49,.20);
+--pg-sweep:rgba(41,43,49,.30);--pg-header:rgba(228,231,245,.85);--pg-scrim:rgba(41,43,49,.42);
+--pg-sh-card:rgba(41,43,49,.16);--pg-sh-modal:rgba(41,43,49,.24);--pg-noise:.05;--pg-glow:.14;
+}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--pg-bg);color:var(--pg-text);font-family:"Inter",system-ui,sans-serif}
+a{color:var(--pg-accent);text-decoration:none}
+a:hover{color:var(--pg-accent-lt)}
+[data-reveal]{opacity:0;transform:translateY(26px);transition:opacity .8s cubic-bezier(.2,.7,.3,1),transform .8s cubic-bezier(.2,.7,.3,1)}
+@keyframes dropIn{from{opacity:0;transform:scale(.97)}to{opacity:1;transform:none}}
+@keyframes pulseGlow{0%,100%{opacity:.5}50%{opacity:.85}}
+@keyframes gridDrift{from{background-position:0 0,0 0}to{background-position:72px 72px,72px 72px}}
+@keyframes auroraA{0%,100%{transform:translate(-50%,0) scale(1);opacity:.9}50%{transform:translate(-46%,26px) scale(1.09);opacity:.65}}
+@keyframes auroraB{0%,100%{transform:translate(-58%,10px) scale(1.05);opacity:.5}50%{transform:translate(-42%,-18px) scale(.94);opacity:.8}}
+@keyframes stripeShift{from{background-position:0 0}to{background-position:75px 0}}
+@keyframes orbDrift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-34px,42px) scale(1.08)}}
+@keyframes lineSweep{0%{transform:translateX(-100%)}100%{transform:translateX(100%)}}
+@keyframes themeIcon{from{opacity:0;transform:rotate(-120deg) scale(.5)}to{opacity:1;transform:none}}
+:root.theme-shifting *,:root.theme-shifting *::before,:root.theme-shifting *::after{transition:background-color .5s cubic-bezier(.4,0,.2,1),background-image .5s cubic-bezier(.4,0,.2,1),color .5s cubic-bezier(.4,0,.2,1),border-color .5s cubic-bezier(.4,0,.2,1),box-shadow .5s cubic-bezier(.4,0,.2,1),opacity .5s cubic-bezier(.4,0,.2,1) !important}
+@media (prefers-reduced-motion:reduce){*{animation:none !important}:root.theme-shifting *{transition:none !important}}
+::-webkit-scrollbar{width:9px}::-webkit-scrollbar-track{background:var(--pg-bg)}::-webkit-scrollbar-thumb{background:var(--pg-ring);border-radius:9px}
+</style>
+</helmet>
+<div style="background:var(--pg-bg);min-height:100vh;overflow-x:hidden">
+  <div style="position:fixed;inset:0;z-index:50;pointer-events:none;opacity:var(--pg-noise);mix-blend-mode:overlay;background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E&quot;)"></div>
+
+  <header style="position:sticky;top:0;z-index:40;backdrop-filter:blur(14px);background:var(--pg-header);border-bottom:1px solid var(--pg-line-4)">
+    <div style="max-width:1180px;margin:0 auto;padding:14px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px">
+      <a href="#inicio" style="display:flex;align-items:center;gap:10px;color:var(--pg-text)">
+        <span style="width:9px;height:9px;border-radius:50%;background:var(--pg-accent);box-shadow:0 0 12px var(--pg-accent);animation:pulseGlow 3s ease-in-out infinite"></span>
+        <span style="font:500 15px/1 'Inter',sans-serif;letter-spacing:-.01em">Kelvin Piantino</span>
+      </a>
+      <nav style="display:flex;align-items:center;gap:4px;flex-wrap:wrap">
+        <sc-for list="{{ nav }}" as="item" hint-placeholder-count="5">
+          <a href="{{ item.href }}" style="padding:8px 12px;border-radius:8px;font-size:13.5px;color:var(--pg-muted);transition:background .18s,color .18s" style-hover="background:rgba(145,132,217,.12);color:var(--pg-text)">{{ item.label }}</a>
+        </sc-for>
+      </nav>
+      <div style="display:flex;align-items:center;gap:10px">
+        <button onClick="{{ toggleTheme }}" title="{{ t.themeLabel }}" style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid var(--pg-line-5);border-radius:8px;background:transparent;color:var(--pg-muted);cursor:pointer;transition:color .18s,border-color .18s" style-hover="color:var(--pg-text);border-color:var(--pg-accent-mid)">
+          <span style="{{ sunStyle }}">☀</span>
+          <span style="{{ moonStyle }}">☾</span>
+        </button>
+        <div style="display:flex;gap:4px;padding:3px;border:1px solid var(--pg-line-5);border-radius:8px">
+          <button onClick="{{ setPt }}" style="{{ ptBtn }}">PT</button>
+          <button onClick="{{ setEn }}" style="{{ enBtn }}">EN</button>
+        </div>
+        <a href="#" onClick="{{ downloadCv }}" class="btn btn-primary" style="padding:8px 14px;transition:background .18s" style-hover="background:rgba(145,132,217,.14)">{{ t.cv }}</a>
+      </div>
+    </div>
+  </header>
+
+  <section id="inicio" style="position:relative;padding:130px 32px 110px;text-align:center;overflow:hidden">
+    <div style="position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(var(--pg-line-2) 1px,transparent 1px),linear-gradient(90deg,var(--pg-line-2) 1px,transparent 1px);background-size:72px 72px;mask-image:radial-gradient(ellipse 70% 60% at 50% 35%,#000,transparent 75%);-webkit-mask-image:radial-gradient(ellipse 70% 60% at 50% 35%,#000,transparent 75%);animation:gridDrift 26s linear infinite"></div>
+    <div style="position:absolute;top:-260px;left:50%;width:820px;height:620px;background:radial-gradient(ellipse at center,rgba(145,132,217,.22),rgba(145,132,217,0) 68%);pointer-events:none;animation:auroraA 19s ease-in-out infinite"></div>
+    <div style="position:absolute;top:-180px;left:50%;width:640px;height:520px;background:radial-gradient(ellipse at center,rgba(93,82,148,.20),transparent 66%);pointer-events:none;animation:auroraB 27s ease-in-out infinite"></div>
+    <div style="position:relative;max-width:900px;margin:0 auto">
+      <div data-reveal style="display:flex;justify-content:center;margin-bottom:34px">
+        <div style="position:relative;width:132px;height:132px">
+          <div style="position:absolute;inset:-10px;border-radius:50%;background:radial-gradient(circle,rgba(145,132,217,.30),transparent 68%);pointer-events:none"></div>
+          <div style="position:absolute;inset:0;border-radius:50%;box-shadow:0 0 0 1px rgba(145,132,217,.45);pointer-events:none;z-index:2"></div>
+          <image-slot id="kp-retrato" shape="circle" style="width:132px;height:132px" placeholder="Sua foto"></image-slot>
+        </div>
+      </div>
+      <div data-reveal style="display:inline-flex;align-items:center;gap:9px;padding:6px 14px;border:1px solid rgba(145,132,217,.35);border-radius:999px;font:400 11.5px/1 'JetBrains Mono',monospace;letter-spacing:.08em;color:var(--pg-accent-lt);margin-bottom:34px">
+        <span style="width:6px;height:6px;border-radius:50%;background:var(--pg-accent)"></span>{{ t.badge }}
+      </div>
+      <h1 data-reveal style="font-size:clamp(40px,6.4vw,78px);font-weight:500;line-height:1.03;letter-spacing:-.035em;margin:0;text-wrap:balance">{{ t.heroTitle }}</h1>
+      <p data-reveal style="margin:30px auto 0;max-width:62ch;font-size:17.5px;line-height:1.68;color:var(--pg-lead);text-wrap:pretty">{{ t.heroBody }}</p>
+      <div data-reveal style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:42px">
+        <a href="#projetos" class="btn btn-primary" style="padding:13px 24px;font-size:15px;transition:background .18s,transform .18s" style-hover="background:rgba(145,132,217,.14);transform:translateY(-2px)">{{ t.seeProjects }}</a>
+        <a href="mailto:kelvin_piantino@hotmail.com" class="btn" style="padding:13px 24px;font-size:15px;border-color:var(--pg-line-8);color:var(--pg-bright);transition:border-color .18s,transform .18s" style-hover="border-color:var(--pg-accent-mid);transform:translateY(-2px)">{{ t.sendEmail }}</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="position:relative;overflow:hidden;background:#262a60;background-image:radial-gradient(ellipse at 50% 0%,#353b80,#262a60 70%);padding:56px 32px">
+    <div style="position:absolute;inset:0;pointer-events:none;opacity:.5;background-image:repeating-linear-gradient(115deg,rgba(255,255,255,.05) 0 1px,transparent 1px 34px);animation:stripeShift 22s linear infinite"></div>
+    <div style="position:absolute;top:0;left:0;right:0;height:1px;overflow:hidden;pointer-events:none">
+      <div style="width:100%;height:1px;background:linear-gradient(90deg,transparent,var(--pg-sweep),transparent);animation:lineSweep 9s ease-in-out infinite"></div>
+    </div>
+    <div style="position:relative;max-width:1180px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:32px">
+      <sc-for list="{{ stats }}" as="s" hint-placeholder-count="4">
+        <div data-reveal style="display:flex;flex-direction:column;gap:7px">
+          <span style="font:500 34px/1 'Inter',sans-serif;letter-spacing:-.03em;color:#f3f5fe">{{ s.n }}</span>
+          <span style="font-size:13px;line-height:1.4;color:#b5afe8">{{ s.label }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="projetos" style="position:relative;max-width:1180px;margin:0 auto;padding:110px 32px 0">
+    <div style="position:absolute;top:60px;right:-140px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(145,132,217,.10),transparent 65%);pointer-events:none;animation:orbDrift 24s ease-in-out infinite"></div>
+    <div data-reveal style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:38px">
+      <div>
+        <div style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--pg-accent-mid);margin-bottom:14px">{{ t.navProjects }}</div>
+        <h2 style="margin:0;font-size:clamp(28px,3.4vw,42px);font-weight:500;letter-spacing:-.028em;max-width:20ch;text-wrap:pretty">{{ t.projectsTitle }}</h2>
+      </div>
+      <div style="display:flex;gap:7px;flex-wrap:wrap">
+        <sc-for list="{{ filters }}" as="f" hint-placeholder-count="4">
+          <button onClick="{{ f.onClick }}" style="{{ f.style }}">{{ f.label }}</button>
+        </sc-for>
+      </div>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:22px">
+      <sc-for list="{{ projects }}" as="p" hint-placeholder-count="3">
+        <div data-reveal onClick="{{ p.onOpen }}" style="position:relative;background:var(--pg-surface);border-radius:14px;box-shadow:0 0 0 1px var(--pg-ring);padding:30px 28px 26px;cursor:pointer;overflow:hidden;transition:box-shadow .25s,transform .25s" style-hover="box-shadow:0 0 0 1px var(--pg-accent-mid),0 16px 40px var(--pg-sh-card);transform:translateY(-4px)">
+          <div style="position:absolute;top:-70px;right:-70px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(145,132,217,.16),transparent 70%);pointer-events:none"></div>
+          <div style="display:flex;align-items:center;justify-content:space-between;gap:14px">
+            <span style="font:400 11px/1 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--pg-accent-mid)">{{ p.kind }}</span>
+            <span style="font-size:17px;color:var(--pg-accent-deep)">↗</span>
+          </div>
+          <h3 style="margin:20px 0 0;font-size:26px;font-weight:500;letter-spacing:-.024em">{{ p.name }}</h3>
+          <p style="margin:11px 0 0;font-size:14.5px;line-height:1.62;color:var(--pg-muted);text-wrap:pretty">{{ p.blurb }}</p>
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:22px">
+            <sc-for list="{{ p.stack }}" as="s" hint-placeholder-count="4">
+              <span style="font:400 11px/1 'JetBrains Mono',monospace;padding:5px 9px;border-radius:5px;background:rgba(145,132,217,.10);color:var(--pg-accent-lt)">{{ s }}</span>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="experiencia" style="max-width:1180px;margin:0 auto;padding:110px 32px 0">
+    <div data-reveal style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--pg-accent-mid);margin-bottom:14px">{{ t.navExp }}</div>
+    <h2 data-reveal style="margin:0 0 46px;font-size:clamp(28px,3.4vw,42px);font-weight:500;letter-spacing:-.028em">{{ t.expTitle }}</h2>
+    <div style="position:relative;padding-left:30px;border-left:1px solid var(--pg-line-5)">
+      <sc-for list="{{ jobs }}" as="j" hint-placeholder-count="5">
+        <div data-reveal style="position:relative;padding:0 0 42px">
+          <span style="position:absolute;left:-35px;top:7px;width:9px;height:9px;border-radius:50%;background:var(--pg-bg);box-shadow:0 0 0 1px var(--pg-accent-mid)"></span>
+          <div style="font:400 12px/1 'JetBrains Mono',monospace;color:var(--pg-label);margin-bottom:11px">{{ j.period }}</div>
+          <div style="font-size:19px;font-weight:500;letter-spacing:-.015em">{{ j.role }}</div>
+          <div style="font-size:14px;color:var(--pg-accent-mid);margin-top:4px">{{ j.company }}</div>
+          <p style="margin:13px 0 0;font-size:14.5px;line-height:1.68;color:var(--pg-muted);max-width:74ch;text-wrap:pretty">{{ j.body }}</p>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="skills" style="max-width:1180px;margin:0 auto;padding:70px 32px 0">
+    <div data-reveal style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--pg-accent-mid);margin-bottom:14px">{{ t.navSkills }}</div>
+    <h2 data-reveal style="margin:0 0 40px;font-size:clamp(28px,3.4vw,42px);font-weight:500;letter-spacing:-.028em">{{ t.skillsTitle }}</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px">
+      <sc-for list="{{ skillGroups }}" as="g" hint-placeholder-count="4">
+        <div data-reveal style="background:var(--pg-surface);border-radius:12px;box-shadow:0 0 0 1px var(--pg-ring);padding:24px;transition:box-shadow .22s" style-hover="box-shadow:0 0 0 1px var(--pg-accent-deep)">
+          <div style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--pg-accent-mid);margin-bottom:16px">{{ g.title }}</div>
+          <div style="display:flex;flex-wrap:wrap;gap:7px">
+            <sc-for list="{{ g.items }}" as="s" hint-placeholder-count="5">
+              <span style="font-size:13px;padding:6px 11px;border-radius:7px;background:var(--pg-line-1);color:var(--pg-bright)">{{ s }}</span>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="sobre" style="max-width:1180px;margin:0 auto;padding:110px 32px 0">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:56px;align-items:start">
+      <div>
+        <div data-reveal style="font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.16em;text-transform:uppercase;color:var(--pg-accent-mid);margin-bottom:14px">{{ t.navAbout }}</div>
+        <h2 data-reveal style="margin:0 0 26px;font-size:clamp(28px,3.4vw,42px);font-weight:500;letter-spacing:-.028em;max-width:16ch;text-wrap:pretty">{{ t.aboutTitle }}</h2>
+        <p data-reveal style="margin:0 0 18px;font-size:16px;line-height:1.72;color:var(--pg-bright);text-wrap:pretty">{{ t.about1 }}</p>
+        <p data-reveal style="margin:0;font-size:15px;line-height:1.72;color:var(--pg-muted);text-wrap:pretty">{{ t.about2 }}</p>
+      </div>
+      <div data-reveal style="display:flex;flex-direction:column;gap:14px">
+        <sc-for list="{{ education }}" as="e" hint-placeholder-count="2">
+          <div style="background:var(--pg-surface);border-radius:12px;box-shadow:0 0 0 1px var(--pg-ring);padding:22px">
+            <div style="display:flex;align-items:center;gap:9px;flex-wrap:wrap">
+              <span style="font:400 11px/1 'JetBrains Mono',monospace;color:var(--pg-label)">{{ e.period }}</span>
+              <span style="{{ e.statusStyle }}">{{ e.status }}</span>
+            </div>
+            <div style="font-size:17px;font-weight:500;margin-top:10px">{{ e.school }}</div>
+            <div style="font-size:14px;color:var(--pg-muted);margin-top:5px">{{ e.course }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" style="position:relative;margin-top:110px;padding:100px 32px;text-align:center;overflow:hidden;border-top:1px solid var(--pg-line-4)">
+    <div style="position:absolute;bottom:-300px;left:50%;width:900px;height:600px;background:radial-gradient(ellipse at center,rgba(145,132,217,.18),transparent 70%);pointer-events:none;animation:auroraA 23s ease-in-out infinite"></div>
+    <div style="position:relative;max-width:760px;margin:0 auto">
+      <h2 data-reveal style="margin:0;font-size:clamp(30px,4.4vw,52px);font-weight:500;letter-spacing:-.03em;line-height:1.1;text-wrap:balance">{{ t.contactTitle }}</h2>
+      <p data-reveal style="margin:22px auto 0;max-width:52ch;font-size:16px;line-height:1.65;color:var(--pg-muted)">{{ t.contactBody }}</p>
+      <div data-reveal style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:38px">
+        <a href="mailto:kelvin_piantino@hotmail.com" class="btn btn-primary" style="padding:13px 24px;font-size:15px;transition:background .18s,transform .18s" style-hover="background:rgba(145,132,217,.14);transform:translateY(-2px)">kelvin_piantino@hotmail.com</a>
+        <a href="https://wa.me/5513996373658" target="_blank" rel="noopener" class="btn" style="padding:13px 24px;font-size:15px;border-color:var(--pg-line-8);color:var(--pg-bright);transition:border-color .18s" style-hover="border-color:var(--pg-accent-mid)">WhatsApp</a>
+        <a href="https://www.linkedin.com/in/kelvin-piantino" target="_blank" class="btn" style="padding:13px 24px;font-size:15px;border-color:var(--pg-line-8);color:var(--pg-bright);transition:border-color .18s" style-hover="border-color:var(--pg-accent-mid)">LinkedIn</a>
+        <a href="tel:+5513996373658" class="btn" style="padding:13px 24px;font-size:15px;border-color:var(--pg-line-8);color:var(--pg-bright);transition:border-color .18s" style-hover="border-color:var(--pg-accent-mid)">+55 13 99637-3658</a>
+      </div>
+      <div data-reveal style="margin-top:64px;font:400 11px/1.6 'JetBrains Mono',monospace;color:var(--pg-faint)">© 2026 Kelvin Piantino · São Paulo, BR</div>
+    </div>
+  </section>
+
+  <sc-if value="{{ open }}">
+    <div onClick="{{ closeModal }}" style="position:fixed;inset:0;z-index:60;background:var(--pg-scrim);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:32px;animation:dropIn .22s ease">
+      <div onClick="{{ stop }}" style="width:min(680px,100%);max-height:84vh;overflow:auto;background:var(--pg-surface);border-radius:14px;box-shadow:0 0 0 1px var(--pg-faint),0 16px 40px var(--pg-sh-modal);padding:38px 40px">
+        <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px">
+          <div>
+            <div style="font:400 11px/1 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--pg-accent-mid);margin-bottom:12px">{{ open.kind }}</div>
+            <h3 style="margin:0;font-size:32px;font-weight:500;letter-spacing:-.025em">{{ open.name }}</h3>
+          </div>
+          <button onClick="{{ closeModal }}" style="background:transparent;border:1px solid var(--pg-line-6);color:var(--pg-muted);border-radius:8px;width:32px;height:32px;cursor:pointer;font-size:15px;flex:none">✕</button>
+        </div>
+        <p style="margin:22px 0 0;font-size:16px;line-height:1.7;color:var(--pg-bright);text-wrap:pretty">{{ open.blurb }}</p>
+        <p style="margin:14px 0 0;font-size:15px;line-height:1.7;color:var(--pg-muted);text-wrap:pretty">{{ open.detail }}</p>
+        <div style="margin-top:26px;font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--pg-label)">{{ t.stack }}</div>
+        <div style="display:flex;gap:7px;flex-wrap:wrap;margin-top:12px">
+          <sc-for list="{{ open.stack }}" as="s" hint-placeholder-count="4">
+            <span style="font:400 12px/1 'JetBrains Mono',monospace;padding:6px 10px;border-radius:6px;background:rgba(145,132,217,.12);color:var(--pg-accent-lt)">{{ s }}</span>
+          </sc-for>
+        </div>
+        <div style="margin-top:26px;font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--pg-label)">{{ t.highlights }}</div>
+        <ul style="margin:12px 0 0;padding-left:18px;color:var(--pg-muted);font-size:14px;line-height:1.75">
+          <sc-for list="{{ open.points }}" as="pt" hint-placeholder-count="3">
+            <li>{{ pt }}</li>
+          </sc-for>
+        </ul>
+      </div>
+    </div>
+  </sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const DATA = {
+  pt: {
+    cv: "Baixar CV", stack: "Stack", highlights: "Destaques", themeLabel: "Alternar tema claro/escuro",
+    badge: "Disponível para novas oportunidades",
+    navProjects: "Projetos", navExp: "Experiência", navSkills: "Habilidades", navAbout: "Sobre", navContact: "Contato",
+    nav: ["Projetos", "Experiência", "Habilidades", "Sobre", "Contato"],
+    heroTitle: "Desenvolvedor Full Stack & Mobile",
+    heroBody: "Cinco anos levando sistemas web para o mobile com React Native e Expo, assumindo responsabilidade técnica de ponta a ponta e participando das decisões arquiteturais. Foco em performance, estabilidade e consumo eficiente de APIs em ambientes serverless.",
+    seeProjects: "Ver projetos", sendEmail: "Enviar e-mail",
+    stats: [{ n: "5 anos", label: "de experiência em desenvolvimento" }, { n: "3 plataformas", label: "web, mobile e desktop em produção" }, { n: "React Native", label: "especialidade principal, com Expo" }, { n: "2 lojas", label: "publicações em Microsoft Store e Apple Store" }],
+    projectsTitle: "Projetos selecionados",
+    filters: [["all", "Tudo"], ["Mobile", "Mobile"], ["Web", "Web"], ["Desktop", "Desktop"]],
+    expTitle: "Trajetória",
+    skillsTitle: "Habilidades técnicas",
+    aboutTitle: "Visão sistêmica do produto",
+    about1: "Atuo de forma crítica na adaptação técnica de soluções web para o contexto mobile, avaliando arquitetura, padrões, riscos e impacto operacional. Tenho participação direta na definição de estratégias de integração, revisão técnica de implementações e garantia da qualidade do produto em produção.",
+    about2: "Utilizo Inteligência Artificial de forma estratégica no desenvolvimento, documentação e construção de funcionalidades, integrando serviços via API para acelerar entregas e aumentar a confiabilidade técnica.",
+    contactTitle: "Vamos conversar sobre o próximo projeto",
+    contactBody: "Aberto a posições sênior em mobile e full stack. Respondo em até um dia útil.",
+    education: [
+      { school: "Estácio", course: "Bacharelado em Engenharia de Software", period: "2024 — 2029", status: "Em andamento" },
+      { school: "ETEC — Escola Técnica Estadual de SP", course: "Técnico Integrado em Tecnologia da Informação", period: "2016 — 2017" }
+    ],
+    skillGroups: [
+      { title: "Mobile", items: ["React Native", "Expo", "Expo Router", "Ionic Framework", "App Store", "Play Store"] },
+      { title: "Front-end", items: ["React", "TypeScript", "Vue.js 3", "Quasar", "DevExtreme", "Tailwind"] },
+      { title: "Back-end & dados", items: ["Node.js", "Express", "PostgreSQL", "SQL Server", "APIs REST", "Serverless"] },
+      { title: "Qualidade & plataforma", items: ["TDD", "Sentry", "LogRocket", "Vexo", "Tauri", "Azure", "GitHub"] }
+    ],
+    projects: [
+      { name: "Kaizen Fit", kind: "Mobile", tag: "Mobile", stack: ["React Native", "Expo", "Supabase", "TypeScript"],
+        blurb: "App de acompanhamento de treinos com sincronização offline e notificações de rotina.",
+        detail: "Projeto fictício de demonstração. A camada offline usa uma fila local de mutações que reconcilia com o servidor na volta da conexão, mantendo o histórico de treino consistente mesmo em uso na academia sem sinal.",
+        points: ["Fila offline com reconciliação por timestamp", "Bundle reduzido em 38% com code splitting de rotas", "Crash-free sessions acompanhadas via Sentry"] },
+      { name: "Rota", kind: "Web", tag: "Web", stack: ["React", "TypeScript", "Node.js", "PostgreSQL"],
+        blurb: "Painel de logística em tempo real para acompanhamento de frota e rotas de entrega.",
+        detail: "Projeto fictício de demonstração. Painel com mapa, filtros por região e atualização via websocket, desenhado para operar com centenas de veículos simultâneos sem degradar a renderização.",
+        points: ["Atualização em tempo real via websocket", "Virtualização de listas para 500+ veículos", "APIs REST com contratos versionados"] },
+      { name: "Ledger", kind: "Desktop", tag: "Desktop", stack: ["Tauri", "React", "SQLite", "Rust"],
+        blurb: "Aplicação desktop de conciliação financeira, empacotada para Microsoft Store e Apple Store.",
+        detail: "Projeto fictício de demonstração. Empacotamento multiplataforma com Tauri, banco local em SQLite e importação de extratos em lote, com publicação nas lojas oficiais.",
+        points: ["Build multiplataforma Windows e macOS", "Importação em lote com validação de esquema", "Publicação nas lojas oficiais"] }
+    ],
+    jobs: [
+      { company: "Cresci e Perdi", role: "Desenvolvedor Full Stack DevOps", period: "out/2025 — atual · São Paulo",
+        body: "Responsável pela portabilidade de sistemas web para aplicações mobile, com atuação em todo o ciclo de desenvolvimento. Conduzo a adaptação técnica e arquitetural, avaliando consumo de APIs, uso de rede e pontos de falha em ambientes serverless. Observabilidade com LogRocket, Sentry e Vexo; aplicações desktop com Tauri publicadas na Microsoft Store e Apple Store." },
+      { company: "GBS Global Business Solution", role: "Desenvolvedor de aplicativos móveis", period: "nov/2023 — out/2025 · Mauá",
+        body: "Equipe EGISMOB: desenvolvimento e aprimoramento contínuo do aplicativo com Expo-CLI e React Native. Design e implementação de novos recursos, otimização de componentes-chave, revisões de código e testes." },
+      { company: "WVSolutions Tecnologia", role: "Desenvolvedor web front end", period: "jan/2023 — nov/2023 · São Paulo",
+        body: "Vue.js, HTML, CSS, JavaScript e Tailwind. Layouts responsivos, otimização de performance, componentização e gestão de estado no Vue 3, boas práticas de SEO e acessibilidade, integração com APIs externas e Microsoft Azure." },
+      { company: "Grupo Webee", role: "Desenvolvedor web Full-Stack", period: "set/2022 — jan/2023 · São Paulo",
+        body: "Desenvolvimento de landing pages na plataforma Hostinger com WordPress." },
+      { company: "GBS Global Business Solution", role: "Desenvolvedor web Full-Stack", period: "ago/2021 — set/2022 · São Bernardo do Campo",
+        body: "Front-end com Vue.js, Quasar, DevExtreme e Google Maps API; back-end com Node.js, Express.js e SQL Server, incluindo construção de APIs REST e integração com serviços externos." }
+    ]
+  },
+  en: {
+    cv: "Download CV", stack: "Stack", highlights: "Highlights", themeLabel: "Toggle light/dark theme",
+    badge: "Available for new opportunities",
+    navProjects: "Projects", navExp: "Experience", navSkills: "Skills", navAbout: "About", navContact: "Contact",
+    nav: ["Projects", "Experience", "Skills", "About", "Contact"],
+    heroTitle: "Full Stack & Mobile Developer",
+    heroBody: "Five years moving web systems to mobile with React Native and Expo, owning technical responsibility end to end and taking part in architectural decisions. Focused on performance, stability and efficient API consumption in serverless environments.",
+    seeProjects: "See projects", sendEmail: "Send email",
+    stats: [{ n: "5 years", label: "of development experience" }, { n: "3 platforms", label: "web, mobile and desktop in production" }, { n: "React Native", label: "core specialty, with Expo" }, { n: "2 stores", label: "releases on Microsoft Store and Apple Store" }],
+    projectsTitle: "Selected projects",
+    filters: [["all", "All"], ["Mobile", "Mobile"], ["Web", "Web"], ["Desktop", "Desktop"]],
+    expTitle: "Track record",
+    skillsTitle: "Technical skills",
+    aboutTitle: "A systemic view of the product",
+    about1: "I take a critical approach to adapting web solutions for mobile, assessing architecture, patterns, risk and operational impact. I take direct part in defining integration strategies, reviewing implementations and safeguarding product quality in production.",
+    about2: "I use AI strategically in development, documentation and feature work, integrating services via API to speed up delivery and raise technical reliability.",
+    contactTitle: "Let's talk about the next project",
+    contactBody: "Open to senior mobile and full stack roles. I reply within one business day.",
+    education: [
+      { school: "Estácio", course: "B.Eng. in Software Engineering", period: "2024 — 2029", status: "In progress" },
+      { school: "ETEC — São Paulo State Technical School", course: "Technical degree in Information Technology", period: "2016 — 2017" }
+    ],
+    skillGroups: [
+      { title: "Mobile", items: ["React Native", "Expo", "Expo Router", "Ionic Framework", "App Store", "Play Store"] },
+      { title: "Front-end", items: ["React", "TypeScript", "Vue.js 3", "Quasar", "DevExtreme", "Tailwind"] },
+      { title: "Back-end & data", items: ["Node.js", "Express", "PostgreSQL", "SQL Server", "REST APIs", "Serverless"] },
+      { title: "Quality & platform", items: ["TDD", "Sentry", "LogRocket", "Vexo", "Tauri", "Azure", "GitHub"] }
+    ],
+    projects: [
+      { name: "Kaizen Fit", kind: "Mobile", tag: "Mobile", stack: ["React Native", "Expo", "Supabase", "TypeScript"],
+        blurb: "Workout tracking app with offline sync and routine notifications.",
+        detail: "Fictional demo project. The offline layer uses a local mutation queue that reconciles with the server once connectivity returns, keeping training history consistent even with no signal at the gym.",
+        points: ["Offline queue with timestamp reconciliation", "38% smaller bundle through route code splitting", "Crash-free sessions tracked with Sentry"] },
+      { name: "Rota", kind: "Web", tag: "Web", stack: ["React", "TypeScript", "Node.js", "PostgreSQL"],
+        blurb: "Real-time logistics dashboard for fleet and delivery route monitoring.",
+        detail: "Fictional demo project. Map view, region filters and websocket updates, designed to handle hundreds of concurrent vehicles without degrading rendering.",
+        points: ["Real-time websocket updates", "List virtualization for 500+ vehicles", "Versioned REST API contracts"] },
+      { name: "Ledger", kind: "Desktop", tag: "Desktop", stack: ["Tauri", "React", "SQLite", "Rust"],
+        blurb: "Desktop financial reconciliation app, packaged for Microsoft Store and Apple Store.",
+        detail: "Fictional demo project. Cross-platform packaging with Tauri, local SQLite storage and batch statement import, published to the official stores.",
+        points: ["Cross-platform Windows and macOS builds", "Batch import with schema validation", "Published to official stores"] }
+    ],
+    jobs: [
+      { company: "Cresci e Perdi", role: "Full Stack DevOps Developer", period: "Oct 2025 — present · São Paulo",
+        body: "Responsible for porting web systems to mobile applications across the whole development cycle. I lead the technical and architectural adaptation, assessing API consumption, network usage and failure points in serverless environments. Observability with LogRocket, Sentry and Vexo; desktop apps with Tauri published to the Microsoft Store and Apple Store." },
+      { company: "GBS Global Business Solution", role: "Mobile application developer", period: "Nov 2023 — Oct 2025 · Mauá",
+        body: "EGISMOB team: continuous development and improvement of the app with Expo-CLI and React Native. Designed and implemented new features, optimized key components, took part in code reviews and testing." },
+      { company: "WVSolutions Tecnologia", role: "Front-end web developer", period: "Jan 2023 — Nov 2023 · São Paulo",
+        body: "Vue.js, HTML, CSS, JavaScript and Tailwind. Responsive layouts, web performance optimization, componentization and state management in Vue 3, SEO and accessibility practices, external API integration and Microsoft Azure." },
+      { company: "Grupo Webee", role: "Full-Stack web developer", period: "Sep 2022 — Jan 2023 · São Paulo",
+        body: "Landing page development on the Hostinger platform with WordPress." },
+      { company: "GBS Global Business Solution", role: "Full-Stack web developer", period: "Aug 2021 — Sep 2022 · São Bernardo do Campo",
+        body: "Front-end with Vue.js, Quasar, DevExtreme and the Google Maps API; back-end with Node.js, Express.js and SQL Server, including REST API construction and third-party integrations." }
+    ]
+  }
+};
+
+class Component extends DCLogic {
+  state = { lang: "pt", filter: "all", open: null, theme: "dark" };
+
+  componentDidMount() {
+    let saved = null;
+    try { saved = localStorage.getItem("kp-portfolio-theme"); } catch (e) {}
+    const theme = saved === "light" || saved === "dark" ? saved : "dark";
+    this.applyTheme(theme);
+    this.setState({ theme });
+    this.observe();
+  }
+
+  applyTheme(theme, animate) {
+    const root = document.documentElement;
+    if (animate) {
+      root.classList.add("theme-shifting");
+      clearTimeout(this.themeTimer);
+      this.themeTimer = setTimeout(() => root.classList.remove("theme-shifting"), 560);
+    }
+    root.setAttribute("data-kp-theme", theme);
+    try { localStorage.setItem("kp-portfolio-theme", theme); } catch (e) {}
+  }
+  componentDidUpdate() { this.observe(); }
+
+  observe() {
+    if (!this.io) {
+      this.io = new IntersectionObserver((entries) => {
+        entries.forEach((e) => {
+          if (e.isIntersecting) {
+            e.target.style.opacity = "1";
+            e.target.style.transform = "none";
+            this.io.unobserve(e.target);
+          }
+        });
+      }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    }
+    document.querySelectorAll("[data-reveal]").forEach((el, i) => {
+      if (el.dataset.revealed) return;
+      el.dataset.revealed = "1";
+      el.style.transitionDelay = Math.min(i % 5, 4) * 60 + "ms";
+      this.io.observe(el);
+    });
+  }
+
+  navHref(i) { return ["#projetos", "#experiencia", "#skills", "#sobre", "#contato"][i]; }
+
+  renderVals() {
+    const t = DATA[this.state.lang];
+    const filter = this.state.filter;
+    const chip = (on) => "font:400 12px/1 'Inter',sans-serif;padding:8px 14px;border-radius:999px;cursor:pointer;transition:all .18s;background:" +
+      (on ? "rgba(145,132,217,.16)" : "transparent") + ";border:1px solid " + (on ? "var(--pg-accent-mid)" : "var(--pg-line-5)") + ";color:" + (on ? "var(--pg-accent-br)" : "var(--pg-muted)");
+    const langBtn = (on) => "font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.08em;padding:7px 9px;border-radius:6px;border:0;cursor:pointer;transition:all .18s;background:" +
+      (on ? "rgba(145,132,217,.18)" : "transparent") + ";color:" + (on ? "var(--pg-accent-br)" : "var(--pg-label)");
+
+    return {
+      t,
+      nav: t.nav.map((label, i) => ({ label, href: this.navHref(i) })),
+      stats: t.stats,
+      skillGroups: t.skillGroups,
+      education: t.education.map((e) => ({ ...e, statusStyle: e.status ? "font:400 10.5px/1 'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase;padding:5px 8px;border-radius:5px;background:rgba(145,132,217,.12);color:var(--pg-accent-lt)" : "display:none" })),
+      jobs: t.jobs,
+      open: this.state.open,
+      filters: t.filters.map(([id, label]) => ({ id, label, style: chip(filter === id), onClick: () => this.setState({ filter: id }) })),
+      projects: t.projects.filter((p) => filter === "all" || p.tag === filter).map((p) => ({ ...p, onOpen: () => this.setState({ open: p }) })),
+      closeModal: () => this.setState({ open: null }),
+      stop: (e) => e.stopPropagation(),
+      toggleTheme: () => {
+        const next = this.state.theme === "dark" ? "light" : "dark";
+        this.applyTheme(next, true);
+        this.setState({ theme: next });
+      },
+      sunStyle: "font-size:14px;line-height:1;animation:themeIcon .45s cubic-bezier(.34,1.4,.5,1);display:" + (this.state.theme === "dark" ? "block" : "none"),
+      moonStyle: "font-size:14px;line-height:1;animation:themeIcon .45s cubic-bezier(.34,1.4,.5,1);display:" + (this.state.theme === "dark" ? "none" : "block"),
+      setPt: () => this.setState({ lang: "pt" }),
+      setEn: () => this.setState({ lang: "en" }),
+      ptBtn: langBtn(this.state.lang === "pt"),
+      enBtn: langBtn(this.state.lang === "en"),
+      downloadCv: (e) => e.preventDefault()
+    };
+  }
+}
+
+</script>
+</body>
+</html>

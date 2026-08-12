@@ -1,0 +1,9 @@
+node_modules
+dist
+*.tsbuildinfo
+.DS_Store
+
+# Export do LinkedIn: contém dados pessoais (conexões, mensagens, e-mails).
+# Ver docs/sincronizacao-linkedin.md
+linkedin-export/
+*_LinkedInDataExport*.zip

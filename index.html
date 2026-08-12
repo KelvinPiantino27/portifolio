@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kelvin Piantino — Desenvolvedor Full Stack &amp; Mobile</title>
+    <meta
+      name="description"
+      content="Portfólio de Kelvin Piantino. Cinco anos levando sistemas web para o mobile com React Native e Expo."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // Applies the stored theme before first paint, so a reader who chose
+      // light does not get a frame of dark. useTheme owns it from here on.
+      try {
+        var t = localStorage.getItem("kp-portfolio-theme");
+        document.documentElement.dataset.kpTheme = t === "light" ? "light" : "dark";
+      } catch (e) {
+        document.documentElement.dataset.kpTheme = "dark";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
