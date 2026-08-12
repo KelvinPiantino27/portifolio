@@ -1266,13 +1266,49 @@ a:hover {
   }
 
   .header__inner {
-    gap: 12px;
+    gap: 8px;
+  }
+
+  .brand__name {
+    font-size: 14px;
+  }
+
+  .header__actions {
+    gap: 6px;
+  }
+
+  .lang-switch {
+    padding: 2px;
+  }
+
+  .lang-switch__option {
+    padding: 6px 7px;
+  }
+
+  .btn--sm {
+    padding: 7px 10px;
+    font-size: 13px;
   }
 
   .header__nav {
     order: 3;
     width: 100%;
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    mask-image: linear-gradient(to right, black calc(100% - 28px), transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black calc(100% - 28px), transparent 100%);
+  }
+
+  .header__nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .header__link {
+    flex: none;
+    padding: 8px 10px;
   }
 
   .hero {
