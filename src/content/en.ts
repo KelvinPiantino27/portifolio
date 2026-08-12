@@ -56,6 +56,9 @@ export const en: Dict = {
       course: "Technical degree in Information Technology",
       period: "2016 — 2017",
     },
+    // Complementary courses: manual curation, not covered by the LinkedIn sync.
+    { school: "LinkedIn Learning", course: "React Fundamentals", period: "Feb 2026" },
+    { school: "Alura", course: "React Native", period: "Aug 2026" },
   ],
 
   skillGroups: [

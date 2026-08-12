@@ -45,8 +45,13 @@ export const pt: Dict = {
   contactTitle: "Vamos conversar sobre o próximo projeto",
   contactBody: "Aberto a posições sênior em mobile e full stack. Respondo em até um dia útil.",
 
-  // Vem do LinkedIn. Para editar, rode o sync — mudança aqui é sobrescrita.
-  education: linkedinEducation,
+  education: [
+    // Vem do LinkedIn. Para editar, rode o sync — mudança aqui é sobrescrita.
+    ...linkedinEducation,
+    // Cursos complementares: curadoria manual, o sync não mexe aqui.
+    { school: "LinkedIn Learning", course: "Fundamentos de React", period: "fev/2026" },
+    { school: "Alura", course: "React Native", period: "ago/2026" },
+  ],
 
   skillGroups: [
     {
