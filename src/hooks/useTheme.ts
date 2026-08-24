@@ -3,13 +3,13 @@ import { useCallback, useEffect, useRef, useState } from "react";
 export type Theme = "dark" | "light";
 
 const STORAGE_KEY = "kp-portfolio-theme";
-/** Matches the .theme-shifting transition duration in styles.css. */
+/** Espelha a duração da transição de .theme-shifting no styles.css. */
 const SHIFT_MS = 560;
 
 /**
- * The inline script in index.html already resolved the theme before first
- * paint. Reading it back keeps the first render in sync with the DOM instead
- * of assuming a default and correcting it in an effect.
+ * O script inline do index.html já resolveu o tema antes da primeira pintura.
+ * Ler de volta mantém o primeiro render em sincronia com o DOM, em vez de
+ * assumir um padrão e corrigir depois num efeito.
  */
 function initialTheme(): Theme {
   return document.documentElement.dataset.kpTheme === "light" ? "light" : "dark";
@@ -24,12 +24,12 @@ export function useTheme() {
     try {
       localStorage.setItem(STORAGE_KEY, theme);
     } catch {
-      // Private mode or blocked storage: the theme still applies for this visit.
+      // Aba anônima ou storage bloqueado: o tema ainda vale para esta visita.
     }
   }, [theme]);
 
-  // Cross-fades colors only while toggling, so the transition does not fight
-  // the reveal animations on scroll.
+  // Faz o cross-fade das cores só durante a troca, para a transição não brigar
+  // com as animações de reveal do scroll.
   const toggle = useCallback(() => {
     const root = document.documentElement;
     root.classList.add("theme-shifting");

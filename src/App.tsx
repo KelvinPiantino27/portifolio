@@ -15,9 +15,9 @@ import { useTheme } from "./hooks/useTheme";
 export default function App() {
   const [lang, setLang] = useState<Lang>("pt");
   const [filter, setFilter] = useState<FilterId>("all");
-  // The open project is held by name, not by object: names are stable across
-  // languages, so switching PT/EN retranslates the dialog instead of freezing
-  // the copy it was opened with.
+  // Guarda o projeto aberto pelo nome, e não pelo objeto: o nome é estável
+  // entre os idiomas, então trocar PT/EN retraduz o diálogo em vez de congelar
+  // o texto de quando ele foi aberto.
   const [openName, setOpenName] = useState<string | null>(null);
   const { theme, toggle } = useTheme();
 
@@ -28,7 +28,7 @@ export default function App() {
     document.documentElement.lang = lang === "pt" ? "pt-BR" : "en";
   }, [lang]);
 
-  // Stable identity: ProjectDialog subscribes to the native close event with it.
+  // Identidade estável: o ProjectDialog assina o evento close nativo com ela.
   const closeProject = useCallback(() => setOpenName(null), []);
 
   return (

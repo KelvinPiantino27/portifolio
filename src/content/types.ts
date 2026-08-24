@@ -1,12 +1,12 @@
 export type Lang = "pt" | "en";
 
-/** Project categories. Language-independent: they are also the filter ids. */
+/** Categorias de projeto. Independem de idioma: são também os ids dos filtros. */
 export type Tag = "Mobile" | "Web" | "Desktop";
 export type FilterId = "all" | Tag;
 
 export const FILTER_IDS: readonly FilterId[] = ["all", "Mobile", "Web", "Desktop"];
 
-/** Section ids, in nav order. Used for both the anchors and the nav labels. */
+/** Ids das seções, na ordem do menu. Servem para as âncoras e para os rótulos. */
 export const SECTION_IDS = ["projetos", "experiencia", "skills", "sobre", "contato"] as const;
 export type SectionId = (typeof SECTION_IDS)[number];
 
@@ -14,9 +14,9 @@ export interface Project {
   name: string;
   tag: Tag;
   stack: string[];
-  /** One-liner on the card. */
+  /** Uma linha, exibida no card. */
   blurb: string;
-  /** Long form, dialog only. */
+  /** Texto longo, só no diálogo. */
   detail: string;
   points: string[];
 }
@@ -37,7 +37,7 @@ export interface Education {
   school: string;
   course: string;
   period: string;
-  /** Renders as a badge. Omit for finished courses. */
+  /** Vira um selo na tela. Omita em cursos concluídos. */
   status?: string;
 }
 
@@ -47,8 +47,8 @@ export interface Stat {
 }
 
 /**
- * Every translated string on the page. Both pt and en satisfy this, so a key
- * added to one language fails the build until the other has it too.
+ * Todo texto traduzível da página. pt e en implementam esta interface, então
+ * chave adicionada em um idioma quebra o build até o outro também tê-la.
  */
 export interface Dict {
   cv: string;

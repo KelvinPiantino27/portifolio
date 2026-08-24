@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
 
 /**
- * One observer for the whole page. Elements unobserve themselves once they
- * have appeared, so scrolling back up does not replay the animation.
+ * Um observer para a página inteira. O elemento se desobserva assim que
+ * aparece, então rolar de volta para cima não repete a animação.
  */
 let observer: IntersectionObserver | null = null;
 
@@ -21,8 +21,8 @@ function sharedObserver(): IntersectionObserver {
 }
 
 /**
- * Fades an element in when it scrolls into view. Attach the ref to any element
- * carrying the `reveal` class; styles.css holds the from/to state.
+ * Faz o elemento surgir com fade ao entrar na tela. Ligue a ref em qualquer
+ * elemento com a classe `reveal`; o estado inicial/final está no styles.css.
  */
 export function useReveal<T extends HTMLElement = HTMLDivElement>() {
   const ref = useRef<T>(null);

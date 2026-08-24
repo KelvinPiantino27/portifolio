@@ -13,18 +13,18 @@ interface Site {
   whatsapp: string;
   linkedin: string;
   location: string;
-  /** Drop the file at public/cv.pdf. Empty hides the button. */
+  /** Coloque o arquivo em public/cv.pdf. Vazio esconde o botão. */
   cvUrl: string;
   /**
-   * Live avatar URL. GitHub serves the current avatar from a permanent URL, so
-   * changing it there changes it here with no rebuild. Empty, or a URL that
-   * fails to load, falls back to the monogram.
+   * URL do avatar ao vivo. O GitHub serve o avatar atual de uma URL permanente,
+   * então trocar lá troca aqui sem rebuild. Vazio, ou URL que falhe ao
+   * carregar, cai no monograma.
    */
   photoUrl: string;
   initials: string;
 }
 
-/** Contact details and links. Identical in both languages, so they live here. */
+/** Contato e links. Iguais nos dois idiomas, por isso moram aqui. */
 export const SITE: Site = {
   name: "Kelvin Piantino",
   email: "kelvin_piantino@hotmail.com",
@@ -34,7 +34,7 @@ export const SITE: Site = {
   linkedin: LINKEDIN_URL,
   location: "São Paulo, BR",
   cvUrl: "./cv.pdf",
-  // size=264 is 2x the 132px slot, for retina.
+  // size=264 é 2x o espaço de 132px, para telas retina.
   photoUrl: "https://github.com/KelvinPiantino27.png?size=264",
   initials: "KP",
 };
