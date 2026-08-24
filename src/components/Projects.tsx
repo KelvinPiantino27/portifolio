@@ -16,6 +16,10 @@ export function Projects({ t, filter, onFilterChange, onOpen }: Props) {
   // de sincronia com a lista que ele filtra.
   const visible = filter === "all" ? t.projects : t.projects.filter((p) => p.tag === filter);
 
+  // Só oferece filtro de categoria que tem projeto — caso contrário o clique
+  // levaria a uma grade vazia. Com uma categoria só, a régua inteira some.
+  const tags = FILTER_IDS.filter((id) => id === "all" || t.projects.some((p) => p.tag === id));
+
   return (
     <section className="section" id="projetos">
       <Reveal className="section__head">
@@ -24,19 +28,21 @@ export function Projects({ t, filter, onFilterChange, onOpen }: Props) {
           <h2 className="section__title section__title--narrow">{t.projectsTitle}</h2>
         </div>
 
-        <div className="chips">
-          {FILTER_IDS.map((id) => (
-            <button
-              key={id}
-              type="button"
-              className="chip"
-              aria-pressed={filter === id}
-              onClick={() => onFilterChange(id)}
-            >
-              {t.filters[id]}
-            </button>
-          ))}
-        </div>
+        {tags.length > 2 && (
+          <div className="chips">
+            {tags.map((id) => (
+              <button
+                key={id}
+                type="button"
+                className="chip"
+                aria-pressed={filter === id}
+                onClick={() => onFilterChange(id)}
+              >
+                {t.filters[id]}
+              </button>
+            ))}
+          </div>
+        )}
       </Reveal>
 
       <div className="project-grid">

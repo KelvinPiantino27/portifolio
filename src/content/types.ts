@@ -19,6 +19,8 @@ export interface Project {
   /** Texto longo, só no diálogo. */
   detail: string;
   points: string[];
+  /** Repositório público. Omita em projeto fechado — o link some. */
+  url?: string;
 }
 
 export interface Job {
@@ -54,6 +56,7 @@ export interface Dict {
   cv: string;
   stack: string;
   highlights: string;
+  repo: string;
   themeLabel: string;
   closeLabel: string;
   badge: string;

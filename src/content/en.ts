@@ -4,6 +4,7 @@ export const en: Dict = {
   cv: "Download CV",
   stack: "Stack",
   highlights: "Highlights",
+  repo: "View on GitHub",
   themeLabel: "Toggle light/dark theme",
   closeLabel: "Close",
   badge: "Available for new opportunities",
@@ -98,49 +99,7 @@ export const en: Dict = {
         "96 automated security checks running in CI",
         "Manager dashboard updates live from shop-floor input",
       ],
-    },
-
-    // PENDENTE: os três projetos abaixo são fictícios, herdados do design, e as
-    // métricas deles são inventadas. Trocar pelos reais antes de divulgar o site
-    // — o mesmo bloco existe em pt.ts e os dois precisam bater.
-    {
-      name: "Kaizen Fit",
-      tag: "Mobile",
-      stack: ["React Native", "Expo", "Supabase", "TypeScript"],
-      blurb: "Workout tracking app with offline sync and routine notifications.",
-      detail:
-        "Fictional demo project. The offline layer uses a local mutation queue that reconciles with the server once connectivity returns, keeping training history consistent even with no signal at the gym.",
-      points: [
-        "Offline queue with timestamp reconciliation",
-        "38% smaller bundle through route code splitting",
-        "Crash-free sessions tracked with Sentry",
-      ],
-    },
-    {
-      name: "Rota",
-      tag: "Web",
-      stack: ["React", "TypeScript", "Node.js", "PostgreSQL"],
-      blurb: "Real-time logistics dashboard for fleet and delivery route monitoring.",
-      detail:
-        "Fictional demo project. Map view, region filters and websocket updates, designed to handle hundreds of concurrent vehicles without degrading rendering.",
-      points: [
-        "Real-time websocket updates",
-        "List virtualization for 500+ vehicles",
-        "Versioned REST API contracts",
-      ],
-    },
-    {
-      name: "Ledger",
-      tag: "Desktop",
-      stack: ["Tauri", "React", "SQLite", "Rust"],
-      blurb: "Desktop financial reconciliation app, packaged for Microsoft Store and Apple Store.",
-      detail:
-        "Fictional demo project. Cross-platform packaging with Tauri, local SQLite storage and batch statement import, published to the official stores.",
-      points: [
-        "Cross-platform Windows and macOS builds",
-        "Batch import with schema validation",
-        "Published to official stores",
-      ],
+      url: "https://github.com/KelvinPiantino27/Stampify",
     },
   ],
 

@@ -1,4 +1,4 @@
-import { X } from "lucide-react";
+import { ExternalLink, X } from "lucide-react";
 import { useEffect, useRef } from "react";
 import type { Dict, Project } from "../content/types";
 
@@ -78,6 +78,18 @@ export function ProjectDialog({ project, t, onClose }: Props) {
               <li key={point}>{point}</li>
             ))}
           </ul>
+
+          {project.url && (
+            <a
+              className="btn btn--primary dialog__repo"
+              href={project.url}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {t.repo}
+              <ExternalLink size={15} aria-hidden="true" />
+            </a>
+          )}
         </div>
       )}
     </dialog>

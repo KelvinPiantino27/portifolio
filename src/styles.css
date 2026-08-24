@@ -1,6 +1,6 @@
 /* ============================================================================
-   Tokens — carried over from the Nocturne design system.
-   Dark is the default; [data-kp-theme="light"] overrides only what changes.
+   Tokens — herdados do design system Nocturne.
+   O escuro é o padrão; [data-kp-theme="light"] sobrescreve só o que muda.
    ========================================================================= */
 :root {
   --pg-bg: #161826;
@@ -35,7 +35,7 @@
   --pg-sh-modal: rgba(0, 0, 0, 0.65);
   --pg-noise: 0.038;
 
-  /* Tint applied over the accent on hover, as a single source for every button. */
+  /* Tinta aplicada sobre o acento no hover, fonte única para todo botão. */
   --pg-accent-wash: rgba(145, 132, 217, 0.14);
   --pg-accent-wash-soft: rgba(145, 132, 217, 0.1);
 
@@ -94,9 +94,8 @@
 
 html {
   scroll-behavior: smooth;
-  /* clip, not hidden: it contains the bleeding decorative gradients without
-     turning the root into a scroll container, which would break the sticky
-     header. */
+  /* clip, e não hidden: segura os gradientes que vazam sem transformar a raiz
+     num container de scroll, o que quebraria o header fixo. */
   overflow-x: clip;
 }
 
@@ -160,7 +159,7 @@ a:hover {
 }
 
 /* ============================================================================
-   Motion
+   Movimento
    ========================================================================= */
 .reveal {
   opacity: 0;
@@ -225,7 +224,7 @@ a:hover {
   }
 }
 
-/* Only while the toggle runs, so it never fights the scroll reveals. */
+/* Só enquanto a troca de tema roda, para nunca brigar com os reveals. */
 :root.theme-shifting *,
 :root.theme-shifting *::before,
 :root.theme-shifting *::after {
@@ -255,7 +254,7 @@ a:hover {
 }
 
 /* ============================================================================
-   Film grain
+   Granulado de filme
    ========================================================================= */
 .grain {
   position: fixed;
@@ -268,7 +267,7 @@ a:hover {
 }
 
 /* ============================================================================
-   Buttons
+   Botões
    ========================================================================= */
 .btn {
   display: inline-flex;
@@ -350,7 +349,7 @@ a:hover {
 }
 
 /* ============================================================================
-   Header
+   Cabeçalho
    ========================================================================= */
 .header {
   position: sticky;
@@ -564,7 +563,7 @@ a:hover {
 }
 
 /* ============================================================================
-   Stats band — full bleed, its own ground, so it ignores the page theme
+   Faixa de stats — ponta a ponta, fundo próprio, ignora o tema da página
    ========================================================================= */
 .stats {
   position: relative;
@@ -617,7 +616,7 @@ a:hover {
 }
 
 /* ============================================================================
-   Sections
+   Seções
    ========================================================================= */
 .section {
   position: relative;
@@ -677,7 +676,7 @@ a:hover {
 }
 
 /* ============================================================================
-   Filter chips
+   Chips de filtro
    ========================================================================= */
 .chips {
   display: flex;
@@ -713,7 +712,7 @@ a:hover {
 }
 
 /* ============================================================================
-   Project cards
+   Cards de projeto
    ========================================================================= */
 .project-grid {
   display: grid;
@@ -783,7 +782,7 @@ a:hover {
   cursor: pointer;
 }
 
-/* Stretches the hit area over the whole card without giving up the button. */
+/* Estica a área de clique sobre o card inteiro sem abrir mão do botão. */
 .project-card__trigger::after {
   content: "";
   position: absolute;
@@ -803,7 +802,7 @@ a:hover {
 }
 
 /* ============================================================================
-   Tags and pills
+   Tags e pills
    ========================================================================= */
 .tag-list {
   display: flex;
@@ -838,7 +837,7 @@ a:hover {
 }
 
 /* ============================================================================
-   Timeline
+   Linha do tempo
    ========================================================================= */
 .timeline {
   position: relative;
@@ -891,7 +890,7 @@ a:hover {
 }
 
 /* ============================================================================
-   Skills
+   Habilidades
    ========================================================================= */
 .skill-grid {
   display: grid;
@@ -929,7 +928,7 @@ a:hover {
 }
 
 /* ============================================================================
-   About and education
+   Sobre e formação
    ========================================================================= */
 .about {
   display: grid;
@@ -1004,7 +1003,7 @@ a:hover {
 }
 
 /* ============================================================================
-   Contact
+   Contato
    ========================================================================= */
 .contact {
   position: relative;
@@ -1053,7 +1052,7 @@ a:hover {
 }
 
 /* ============================================================================
-   Project dialog
+   Diálogo de projeto
    ========================================================================= */
 .dialog {
   width: min(680px, calc(100vw - 64px));
@@ -1138,7 +1137,7 @@ a:hover {
 }
 
 /* ============================================================================
-   Narrow screens
+   Telas estreitas
    ========================================================================= */
 @media (max-width: 640px) {
   :root {
@@ -1213,4 +1212,9 @@ a:hover {
   .about {
     gap: 40px;
   }
+}
+
+.dialog__repo {
+  margin-top: 28px;
+  gap: 8px;
 }

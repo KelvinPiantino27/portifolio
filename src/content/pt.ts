@@ -5,6 +5,7 @@ export const pt: Dict = {
   cv: "Baixar CV",
   stack: "Stack",
   highlights: "Destaques",
+  repo: "Ver no GitHub",
   themeLabel: "Alternar tema claro/escuro",
   closeLabel: "Fechar",
   badge: "Disponível para novas oportunidades",
@@ -90,50 +91,7 @@ export const pt: Dict = {
         "96 verificações de segurança automatizadas rodando no CI",
         "Painel do gestor atualiza ao vivo pelo apontamento do celular",
       ],
-    },
-
-    // PENDENTE: os três projetos abaixo são fictícios, herdados do design, e as
-    // métricas deles são inventadas. Trocar pelos reais antes de divulgar o site
-    // — o mesmo bloco existe em en.ts e os dois precisam bater.
-    {
-      name: "Kaizen Fit",
-      tag: "Mobile",
-      stack: ["React Native", "Expo", "Supabase", "TypeScript"],
-      blurb: "App de acompanhamento de treinos com sincronização offline e notificações de rotina.",
-      detail:
-        "Projeto fictício de demonstração. A camada offline usa uma fila local de mutações que reconcilia com o servidor na volta da conexão, mantendo o histórico de treino consistente mesmo em uso na academia sem sinal.",
-      points: [
-        "Fila offline com reconciliação por timestamp",
-        "Bundle reduzido em 38% com code splitting de rotas",
-        "Crash-free sessions acompanhadas via Sentry",
-      ],
-    },
-    {
-      name: "Rota",
-      tag: "Web",
-      stack: ["React", "TypeScript", "Node.js", "PostgreSQL"],
-      blurb: "Painel de logística em tempo real para acompanhamento de frota e rotas de entrega.",
-      detail:
-        "Projeto fictício de demonstração. Painel com mapa, filtros por região e atualização via websocket, desenhado para operar com centenas de veículos simultâneos sem degradar a renderização.",
-      points: [
-        "Atualização em tempo real via websocket",
-        "Virtualização de listas para 500+ veículos",
-        "APIs REST com contratos versionados",
-      ],
-    },
-    {
-      name: "Ledger",
-      tag: "Desktop",
-      stack: ["Tauri", "React", "SQLite", "Rust"],
-      blurb:
-        "Aplicação desktop de conciliação financeira, empacotada para Microsoft Store e Apple Store.",
-      detail:
-        "Projeto fictício de demonstração. Empacotamento multiplataforma com Tauri, banco local em SQLite e importação de extratos em lote, com publicação nas lojas oficiais.",
-      points: [
-        "Build multiplataforma Windows e macOS",
-        "Importação em lote com validação de esquema",
-        "Publicação nas lojas oficiais",
-      ],
+      url: "https://github.com/KelvinPiantino27/Stampify",
     },
   ],
 
