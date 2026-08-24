@@ -76,10 +76,25 @@ export const pt: Dict = {
     },
   ],
 
-  // PENDENTE: os três projetos abaixo são fictícios, herdados do design, e as
-  // métricas deles são inventadas. Trocar pelos reais antes de divulgar o site
-  // — o mesmo bloco existe em en.ts e os dois precisam bater.
   projects: [
+    {
+      name: "Stampify",
+      tag: "Mobile",
+      stack: ["Expo", "React Native", "TypeScript", "Supabase", "PostgreSQL"],
+      blurb:
+        "Gestão de produção para serigrafia: a fila que o gestor ordena no computador é a que o operador executa no celular, ao vivo.",
+      detail:
+        "Um único código em Expo roda no navegador, no Android e no iOS, com o Supabase inteiro como back-end. A autorização mora no banco: Row Level Security com FORCE em todas as tabelas e as regras de produção em funções SECURITY DEFINER, então a policy recusa mesmo quem chame a API direto. As etapas de produção têm a sequência validada no banco, e reprovar na qualidade reabre a impressão sozinho.",
+      points: [
+        "Autorização no banco, com RLS FORCE em todas as tabelas",
+        "96 verificações de segurança automatizadas rodando no CI",
+        "Painel do gestor atualiza ao vivo pelo apontamento do celular",
+      ],
+    },
+
+    // PENDENTE: os três projetos abaixo são fictícios, herdados do design, e as
+    // métricas deles são inventadas. Trocar pelos reais antes de divulgar o site
+    // — o mesmo bloco existe em en.ts e os dois precisam bater.
     {
       name: "Kaizen Fit",
       tag: "Mobile",

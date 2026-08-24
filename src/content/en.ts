@@ -84,10 +84,25 @@ export const en: Dict = {
     },
   ],
 
-  // PENDENTE: os três projetos abaixo são fictícios, herdados do design, e as
-  // métricas deles são inventadas. Trocar pelos reais antes de divulgar o site
-  // — o mesmo bloco existe em pt.ts e os dois precisam bater.
   projects: [
+    {
+      name: "Stampify",
+      tag: "Mobile",
+      stack: ["Expo", "React Native", "TypeScript", "Supabase", "PostgreSQL"],
+      blurb:
+        "Production management for screen printing: the queue the manager orders on desktop is the one the operator runs on their phone, live.",
+      detail:
+        "A single Expo codebase runs on web, Android and iOS, with Supabase as the entire back-end. Authorization lives in the database: Row Level Security with FORCE on every table and production rules in SECURITY DEFINER functions, so the policy refuses even a caller hitting the API directly. Production stages have their sequence validated in the database, and failing quality reopens the printing stage on its own.",
+      points: [
+        "Database-side authorization, with RLS FORCE on every table",
+        "96 automated security checks running in CI",
+        "Manager dashboard updates live from shop-floor input",
+      ],
+    },
+
+    // PENDENTE: os três projetos abaixo são fictícios, herdados do design, e as
+    // métricas deles são inventadas. Trocar pelos reais antes de divulgar o site
+    // — o mesmo bloco existe em pt.ts e os dois precisam bater.
     {
       name: "Kaizen Fit",
       tag: "Mobile",
