@@ -12,7 +12,8 @@ export type SectionId = (typeof SECTION_IDS)[number];
 
 export interface Project {
   name: string;
-  tag: Tag;
+  /** Um projeto pode ocupar mais de uma categoria, e todas filtram. */
+  tags: Tag[];
   stack: string[];
   /** Uma linha, exibida no card. */
   blurb: string;
@@ -21,6 +22,8 @@ export interface Project {
   points: string[];
   /** Repositório público. Omita em projeto fechado — o link some. */
   url?: string;
+  /** Caminho em public/. Omita e o card fica sem logo. */
+  logo?: string;
 }
 
 export interface Job {

@@ -1218,3 +1218,33 @@ a:hover {
   margin-top: 28px;
   gap: 8px;
 }
+
+.project-card__logo {
+  display: block;
+  margin: 24px auto 0;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px var(--pg-sh-card);
+}
+
+/* Com logo, o card vira uma pilha centralizada; sem logo segue alinhado à
+   esquerda, como os demais. */
+.project-card:has(.project-card__logo) .project-card__name,
+.project-card:has(.project-card__logo) .project-card__blurb {
+  text-align: center;
+}
+
+.project-card:has(.project-card__logo) .project-card__trigger {
+  text-align: center;
+}
+
+.project-card:has(.project-card__logo) .tag-list {
+  justify-content: center;
+}
+
+/* O auto-fit estica o card único na largura inteira da página, o que fica
+   estranho num card de conteúdo centralizado. A regra se desliga sozinha
+   quando entra o segundo projeto. */
+.project-grid:has(.project-card:only-child) {
+  grid-template-columns: minmax(330px, 460px);
+  justify-content: center;
+}

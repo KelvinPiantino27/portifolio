@@ -80,18 +80,19 @@ export const pt: Dict = {
   projects: [
     {
       name: "Stampify",
-      tag: "Mobile",
+      tags: ["Mobile", "Web"],
       stack: ["Expo", "React Native", "TypeScript", "Supabase", "PostgreSQL"],
       blurb:
-        "Gestão de produção para serigrafia: a fila que o gestor ordena no computador é a que o operador executa no celular, ao vivo.",
+        "Do pedido à expedição, sem planilha no meio: gestão de produção para serigrafia, com a fila viva na mão do operador.",
       detail:
-        "Um único código em Expo roda no navegador, no Android e no iOS, com o Supabase inteiro como back-end. A autorização mora no banco: Row Level Security com FORCE em todas as tabelas e as regras de produção em funções SECURITY DEFINER, então a policy recusa mesmo quem chame a API direto. As etapas de produção têm a sequência validada no banco, e reprovar na qualidade reabre a impressão sozinho.",
+        "Serigrafia é produção por etapas: arte, gravação de tela, impressão, secagem, acabamento, qualidade e expedição. Quando isso vive em planilha e caderno, ninguém sabe onde cada pedido está, o refugo só aparece no fechamento do mês e prazo vencido vira descoberta tardia. O Stampify coloca a fila que o gestor prioriza no mesmo lugar em que o operador aponta a produção, pelo celular, no chão de fábrica. Etapa concluída atualiza o painel na hora, e prazo estourando vira aviso dentro do app.",
       points: [
-        "Autorização no banco, com RLS FORCE em todas as tabelas",
-        "96 verificações de segurança automatizadas rodando no CI",
-        "Painel do gestor atualiza ao vivo pelo apontamento do celular",
+        "Fila priorizada: o operador sempre sabe qual é a próxima",
+        "Peças boas e refugo apontados direto do celular, no chão de fábrica",
+        "Painel do gestor ao vivo, com aviso de prazo vencido",
       ],
       url: "https://github.com/KelvinPiantino27/Stampify",
+      logo: "./stampify.png",
     },
   ],
 

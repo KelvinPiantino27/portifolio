@@ -88,18 +88,19 @@ export const en: Dict = {
   projects: [
     {
       name: "Stampify",
-      tag: "Mobile",
+      tags: ["Mobile", "Web"],
       stack: ["Expo", "React Native", "TypeScript", "Supabase", "PostgreSQL"],
       blurb:
-        "Production management for screen printing: the queue the manager orders on desktop is the one the operator runs on their phone, live.",
+        "From order to shipping with no spreadsheet in between: production management for screen printing, with the live queue in the operator's hand.",
       detail:
-        "A single Expo codebase runs on web, Android and iOS, with Supabase as the entire back-end. Authorization lives in the database: Row Level Security with FORCE on every table and production rules in SECURITY DEFINER functions, so the policy refuses even a caller hitting the API directly. Production stages have their sequence validated in the database, and failing quality reopens the printing stage on its own.",
+        "Screen printing runs in stages: art, screen burning, printing, drying, finishing, quality and shipping. When that lives in spreadsheets and notebooks, nobody knows where each order stands, scrap only surfaces at month-end and a blown deadline becomes a late discovery. Stampify puts the queue the manager prioritizes in the same place the operator reports production from, by phone, on the shop floor. A finished stage updates the dashboard instantly, and a deadline running out becomes an alert inside the app.",
       points: [
-        "Database-side authorization, with RLS FORCE on every table",
-        "96 automated security checks running in CI",
-        "Manager dashboard updates live from shop-floor input",
+        "Prioritized queue: the operator always knows what comes next",
+        "Good pieces and scrap reported straight from the phone, on the floor",
+        "Live manager dashboard, with overdue deadline alerts",
       ],
       url: "https://github.com/KelvinPiantino27/Stampify",
+      logo: "./stampify.png",
     },
   ],
 

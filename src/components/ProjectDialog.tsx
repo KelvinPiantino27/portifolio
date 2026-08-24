@@ -45,7 +45,7 @@ export function ProjectDialog({ project, t, onClose }: Props) {
         <div className="dialog__body">
           <div className="dialog__head">
             <div>
-              <p className="eyebrow eyebrow--tight">{project.tag}</p>
+              <p className="eyebrow eyebrow--tight">{project.tags.join(" · ")}</p>
               <h2 id="project-dialog-title" className="dialog__title">
                 {project.name}
               </h2>
