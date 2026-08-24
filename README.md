@@ -40,7 +40,6 @@ src/
 scripts/
   sync-linkedin.mjs     export oficial do LinkedIn → linkedin.generated.ts
 docs/                   documentação
-legacy-dc/              versão anterior, no framework do Claude Design
 ```
 
 `dist/` é gerado e ignorado pelo git.
@@ -70,7 +69,3 @@ Push em `main` publica sozinho, via GitHub Actions e Pages. O workflow roda o se
 - [docs/deploy.md](docs/deploy.md) — pipeline de publicação
 - [docs/sincronizacao-linkedin.md](docs/sincronizacao-linkedin.md) — passo a passo do sync
 - [docs/linkedin.md](docs/linkedin.md) — por que os dados do LinkedIn são sincronizados em build, e não lidos em tempo real
-
-## legacy-dc/
-
-Versão anterior da página, no framework proprietário do Claude Design (`<x-dc>`, `<sc-for>`, `DCLogic`). Guardada só para consulta — nada do projeto atual depende dela.
