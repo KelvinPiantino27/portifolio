@@ -40,7 +40,7 @@ export const pt: Dict = {
   about1:
     "Atuo de forma crítica na adaptação técnica de soluções web para o contexto mobile, avaliando arquitetura, padrões, riscos e impacto operacional. Tenho participação direta na definição de estratégias de integração, revisão técnica de implementações e garantia da qualidade do produto em produção.",
   about2:
-    "Utilizo Inteligência Artificial de forma estratégica no desenvolvimento, documentação e construção de funcionalidades, integrando serviços via API para acelerar entregas e aumentar a confiabilidade técnica.",
+    "Utilizo Inteligência Artificial de forma estratégica no desenvolvimento, documentação e construção de funcionalidades, integrando serviços como ChatGPT e Claude via API para acelerar entregas e aumentar a confiabilidade técnica.",
 
   contactTitle: "Vamos conversar sobre o próximo projeto",
   contactBody: "Aberto a posições sênior em mobile e full stack. Respondo em até um dia útil.",
@@ -50,7 +50,7 @@ export const pt: Dict = {
     ...linkedinEducation,
     // Cursos complementares: curadoria manual, o sync não mexe aqui.
     { school: "LinkedIn Learning", course: "Fundamentos de React", period: "fev/2026" },
-    { school: "Alura", course: "React Native", period: "ago/2026" },
+    { school: "Alura", course: "React Native: Desenvolvendo com Expo", period: "ago/2026" },
   ],
 
   skillGroups: [
@@ -68,11 +68,17 @@ export const pt: Dict = {
     },
     {
       title: "Qualidade & plataforma",
-      items: ["TDD", "Sentry", "LogRocket", "Vexo", "Tauri", "Azure", "GitHub"],
+      items: ["TDD", "Jest", "Sentry", "LogRocket", "Vexo", "Tauri", "Azure", "GitHub"],
+    },
+    {
+      title: "Idiomas",
+      items: ["Português — nativo", "Inglês — básico"],
     },
   ],
 
-  // Os três projetos abaixo são fictícios, herdados do design. Troque pelos reais.
+  // PENDENTE: os três projetos abaixo são fictícios, herdados do design, e as
+  // métricas deles são inventadas. Trocar pelos reais antes de divulgar o site
+  // — o mesmo bloco existe em en.ts e os dois precisam bater.
   projects: [
     {
       name: "Kaizen Fit",

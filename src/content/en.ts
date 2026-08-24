@@ -39,7 +39,7 @@ export const en: Dict = {
   about1:
     "I take a critical approach to adapting web solutions for mobile, assessing architecture, patterns, risk and operational impact. I take direct part in defining integration strategies, reviewing implementations and safeguarding product quality in production.",
   about2:
-    "I use AI strategically in development, documentation and feature work, integrating services via API to speed up delivery and raise technical reliability.",
+    "I use AI strategically in development, documentation and feature work, integrating services such as ChatGPT and Claude via API to speed up delivery and raise technical reliability.",
 
   contactTitle: "Let's talk about the next project",
   contactBody: "Open to senior mobile and full stack roles. I reply within one business day.",
@@ -56,9 +56,9 @@ export const en: Dict = {
       course: "Technical degree in Information Technology",
       period: "2016 — 2017",
     },
-    // Complementary courses: manual curation, not covered by the LinkedIn sync.
+    // Cursos complementares: curadoria manual, o sync não mexe aqui.
     { school: "LinkedIn Learning", course: "React Fundamentals", period: "Feb 2026" },
-    { school: "Alura", course: "React Native", period: "Aug 2026" },
+    { school: "Alura", course: "React Native: Building with Expo", period: "Aug 2026" },
   ],
 
   skillGroups: [
@@ -76,11 +76,17 @@ export const en: Dict = {
     },
     {
       title: "Quality & platform",
-      items: ["TDD", "Sentry", "LogRocket", "Vexo", "Tauri", "Azure", "GitHub"],
+      items: ["TDD", "Jest", "Sentry", "LogRocket", "Vexo", "Tauri", "Azure", "GitHub"],
+    },
+    {
+      title: "Languages",
+      items: ["Portuguese — native", "English — elementary"],
     },
   ],
 
-  // The three projects below are fictional, inherited from the design. Replace with real ones.
+  // PENDENTE: os três projetos abaixo são fictícios, herdados do design, e as
+  // métricas deles são inventadas. Trocar pelos reais antes de divulgar o site
+  // — o mesmo bloco existe em pt.ts e os dois precisam bater.
   projects: [
     {
       name: "Kaizen Fit",
