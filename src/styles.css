@@ -194,55 +194,12 @@ a:hover {
   }
 }
 
-@keyframes auroraA {
-  0%,
-  100% {
-    transform: translate(-50%, 0) scale(1);
-    opacity: 0.9;
-  }
-  50% {
-    transform: translate(-46%, 26px) scale(1.09);
-    opacity: 0.65;
-  }
-}
-
-@keyframes auroraB {
-  0%,
-  100% {
-    transform: translate(-58%, 10px) scale(1.05);
-    opacity: 0.5;
-  }
-  50% {
-    transform: translate(-42%, -18px) scale(0.94);
-    opacity: 0.8;
-  }
-}
-
 @keyframes stripeShift {
   from {
     background-position: 0 0;
   }
   to {
     background-position: 75px 0;
-  }
-}
-
-@keyframes orbDrift {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1);
-  }
-  50% {
-    transform: translate(-34px, 42px) scale(1.08);
-  }
-}
-
-@keyframes lineSweep {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(100%);
   }
 }
 
@@ -521,32 +478,6 @@ a:hover {
   animation: gridDrift 26s linear infinite;
 }
 
-.hero__aurora {
-  position: absolute;
-  left: 50%;
-  pointer-events: none;
-}
-
-.hero__aurora--a {
-  top: -260px;
-  width: 820px;
-  height: 620px;
-  background: radial-gradient(
-    ellipse at center,
-    rgba(145, 132, 217, 0.22),
-    rgba(145, 132, 217, 0) 68%
-  );
-  animation: auroraA 19s ease-in-out infinite;
-}
-
-.hero__aurora--b {
-  top: -180px;
-  width: 640px;
-  height: 520px;
-  background: radial-gradient(ellipse at center, rgba(93, 82, 148, 0.2), transparent 66%);
-  animation: auroraB 27s ease-in-out infinite;
-}
-
 .hero__inner {
   position: relative;
   max-width: 900px;
@@ -656,23 +587,6 @@ a:hover {
   animation: stripeShift 22s linear infinite;
 }
 
-.stats__sweep {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.stats__sweep-line {
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--pg-sweep), transparent);
-  animation: lineSweep 9s ease-in-out infinite;
-}
-
 .stats__inner {
   position: relative;
   max-width: var(--page-max);
@@ -762,18 +676,6 @@ a:hover {
   margin-bottom: 12px;
 }
 
-.orb {
-  position: absolute;
-  top: 60px;
-  right: -140px;
-  width: 520px;
-  height: 520px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(145, 132, 217, 0.1), transparent 65%);
-  pointer-events: none;
-  animation: orbDrift 24s ease-in-out infinite;
-}
-
 /* ============================================================================
    Filter chips
    ========================================================================= */
@@ -842,17 +744,6 @@ a:hover {
   box-shadow:
     0 0 0 1px var(--pg-accent-mid),
     0 16px 40px var(--pg-sh-card);
-}
-
-.project-card__bloom {
-  position: absolute;
-  top: -70px;
-  right: -70px;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(145, 132, 217, 0.16), transparent 70%);
-  pointer-events: none;
 }
 
 .project-card__top {
@@ -1122,17 +1013,6 @@ a:hover {
   text-align: center;
   overflow: hidden;
   border-top: 1px solid var(--pg-line-4);
-}
-
-.contact__aurora {
-  position: absolute;
-  bottom: -300px;
-  left: 50%;
-  width: 900px;
-  height: 600px;
-  background: radial-gradient(ellipse at center, rgba(145, 132, 217, 0.18), transparent 70%);
-  pointer-events: none;
-  animation: auroraA 23s ease-in-out infinite;
 }
 
 .contact__inner {

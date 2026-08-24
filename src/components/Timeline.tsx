@@ -12,7 +12,7 @@ export function Timeline({ t }: { t: Dict }) {
 
       <ol className="timeline">
         {t.jobs.map((job) => (
-          // The same company appears twice, so the period disambiguates it.
+          // A mesma empresa aparece duas vezes, então o período desempata.
           <JobItem key={`${job.company}-${job.period}`} job={job} />
         ))}
       </ol>

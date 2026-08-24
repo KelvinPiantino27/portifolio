@@ -5,8 +5,6 @@ import { Reveal } from "./Reveal";
 export function Contact({ t }: { t: Dict }) {
   return (
     <section className="contact" id="contato">
-      <div className="contact__aurora" aria-hidden="true" />
-
       <div className="contact__inner">
         <Reveal>
           <h2 className="contact__title">{t.contactTitle}</h2>

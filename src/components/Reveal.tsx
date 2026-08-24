@@ -4,11 +4,11 @@ import { useReveal } from "../hooks/useReveal";
 interface Props {
   children: ReactNode;
   className?: string;
-  /** Stagger step; each unit delays the fade by 60ms. */
+  /** Passo do escalonamento; cada unidade atrasa o fade em 60ms. */
   delay?: number;
 }
 
-/** Wraps content that should fade up once it scrolls into view. */
+/** Envolve conteúdo que deve surgir com fade quando entra na tela. */
 export function Reveal({ children, className, delay = 0 }: Props) {
   const ref = useReveal<HTMLDivElement>();
 

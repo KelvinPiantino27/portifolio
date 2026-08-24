@@ -1,3 +1,4 @@
+import { X } from "lucide-react";
 import { useEffect, useRef } from "react";
 import type { Dict, Project } from "../content/types";
 
@@ -10,9 +11,9 @@ interface Props {
 export function ProjectDialog({ project, t, onClose }: Props) {
   const ref = useRef<HTMLDialogElement>(null);
 
-  // Drives the native modal from React state. showModal() supplies Esc, the
-  // focus trap, inertness of the page behind, and focus restore on close —
-  // all of which the previous hand-rolled overlay lacked.
+  // Controla o modal nativo a partir do estado do React. O showModal() já traz
+  // Esc, armadilha de foco, inércia da página atrás e devolução do foco ao
+  // fechar — nada disso existia no overlay feito à mão que veio antes.
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
@@ -20,8 +21,8 @@ export function ProjectDialog({ project, t, onClose }: Props) {
     if (!project && el.open) el.close();
   }, [project]);
 
-  // Esc and backdrop dismissal close the dialog without React knowing. The
-  // close event is what brings state back in sync.
+  // Esc e clique no backdrop fecham o diálogo sem o React saber. É o evento
+  // close que traz o estado de volta à sincronia.
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
@@ -34,8 +35,8 @@ export function ProjectDialog({ project, t, onClose }: Props) {
       ref={ref}
       className="dialog"
       aria-labelledby="project-dialog-title"
-      // The dialog box is padded by its inner element, so a click landing on
-      // the dialog itself came from the backdrop.
+      // O respiro do diálogo vem do elemento interno, então clique que cai no
+      // próprio dialog veio do backdrop.
       onClick={(event) => {
         if (event.target === event.currentTarget) ref.current?.close();
       }}
@@ -55,7 +56,7 @@ export function ProjectDialog({ project, t, onClose }: Props) {
               onClick={() => ref.current?.close()}
               aria-label={t.closeLabel}
             >
-              ✕
+              <X size={18} />
             </button>
           </div>
 

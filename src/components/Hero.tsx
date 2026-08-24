@@ -4,16 +4,14 @@ import type { Dict } from "../content/types";
 import { Reveal } from "./Reveal";
 
 export function Hero({ t }: { t: Dict }) {
-  // The avatar is fetched from a third party, so it can 404, rate-limit, or be
-  // blocked. Falling back to the monogram keeps the hero intact when it does.
+  // O avatar vem de um terceiro, então pode dar 404, bater rate-limit ou ser
+  // bloqueado. Cair no monograma mantém o hero de pé quando isso acontece.
   const [photoFailed, setPhotoFailed] = useState(false);
   const showPhoto = SITE.photoUrl !== "" && !photoFailed;
 
   return (
     <section className="hero" id="inicio">
       <div className="hero__grid" aria-hidden="true" />
-      <div className="hero__aurora hero__aurora--a" aria-hidden="true" />
-      <div className="hero__aurora hero__aurora--b" aria-hidden="true" />
 
       <div className="hero__inner">
         <Reveal className="hero__portrait-wrap">

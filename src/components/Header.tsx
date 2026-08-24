@@ -1,3 +1,4 @@
+import { Moon, Sun } from "lucide-react";
 import { SITE } from "../config";
 import { SECTION_IDS } from "../content/types";
 import type { Dict, Lang } from "../content/types";
@@ -37,7 +38,7 @@ export function Header({ t, lang, theme, onLangChange, onThemeToggle }: Props) {
             aria-label={t.themeLabel}
           >
             <span key={theme} className="icon-button__glyph" aria-hidden="true">
-              {theme === "dark" ? "☀" : "☾"}
+              {theme === "dark" ? <Sun size={16} /> : <Moon size={16} />}
             </span>
           </button>
 

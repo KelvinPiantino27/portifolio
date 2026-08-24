@@ -1,3 +1,4 @@
+import { ArrowUpRight } from "lucide-react";
 import { FILTER_IDS } from "../content/types";
 import type { Dict, FilterId, Project } from "../content/types";
 import { useReveal } from "../hooks/useReveal";
@@ -11,14 +12,12 @@ interface Props {
 }
 
 export function Projects({ t, filter, onFilterChange, onOpen }: Props) {
-  // Derived while rendering rather than mirrored into state, so the filter can
-  // never drift out of sync with the list it filters.
+  // Derivado no render em vez de espelhado em estado, assim o filtro nunca sai
+  // de sincronia com a lista que ele filtra.
   const visible = filter === "all" ? t.projects : t.projects.filter((p) => p.tag === filter);
 
   return (
     <section className="section" id="projetos">
-      <div className="orb" aria-hidden="true" />
-
       <Reveal className="section__head">
         <div>
           <p className="eyebrow">{t.nav.projetos}</p>
@@ -54,17 +53,13 @@ function ProjectCard({ project, onOpen }: { project: Project; onOpen: (name: str
 
   return (
     <article ref={ref} className="reveal project-card">
-      <div className="project-card__bloom" aria-hidden="true" />
-
       <div className="project-card__top">
         <span className="project-card__kind">{project.tag}</span>
-        <span className="project-card__arrow" aria-hidden="true">
-          ↗
-        </span>
+        <ArrowUpRight className="project-card__arrow" size={16} aria-hidden="true" />
       </div>
 
-      {/* The button carries the click target; CSS stretches it over the whole
-          card so the mouse affordance survives without losing keyboard access. */}
+      {/* O botão é o alvo do clique; o CSS o estica sobre o card inteiro, então
+          a área clicável cresce sem perder o acesso por teclado. */}
       <h3 className="project-card__name">
         <button type="button" className="project-card__trigger" onClick={() => onOpen(project.name)}>
           {project.name}
